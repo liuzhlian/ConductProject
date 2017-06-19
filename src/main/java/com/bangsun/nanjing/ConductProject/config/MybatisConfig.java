@@ -15,6 +15,11 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 
+/**
+ * mybatis连接工具类
+ * @author liuzh
+ *
+ */
 @Configuration
 @MapperScan(basePackages = "com.bangsun.nanjing.ConductProject.mapper", sqlSessionTemplateRef  = "SqlSessionTemplate")
 public class MybatisConfig {

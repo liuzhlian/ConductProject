@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript">
@@ -17,13 +19,15 @@
 <link href='http://fonts.useso.com/css?family=PT+Sans:400,700,400italic,700italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Exo+2' rel='stylesheet' type='text/css'>-->
 <!--//webfonts-->
-<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="plugins/vue.js"></script>
+<script type="text/javascript" src="plugins/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 </head>
 <body>
 	<script>
 		
 	</script>
-	<div class="login-form">
+	<div class="login-form" id="login-form">
 		<div class="close"></div>
 		<div class="head-info">
 			<label class="lbl-1"> </label> <label class="lbl-2"> </label> <label
@@ -36,14 +40,14 @@
 		<form>
 			<input type="text" class="text" value="Username"
 				onfocus="this.value = '';"
-				onblur="if (this.value == '') {this.value = 'Username';}">
+				onblur="if (this.value == '') {this.value = 'Username';}" v-model="user.name">
 			<div class="key">
 				<input type="password" value="Password" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'Password';}">
+					onblur="if (this.value == '') {this.value = 'Password';}" v-model="user.password">
 			</div>
 		</form>
 		<div class="signin">
-			<input type="submit" value="Login">
+			<input type="submit" value="Login" v-on:click="showtables">
 		</div>
 	</div>
 	<div class="copy-rights">

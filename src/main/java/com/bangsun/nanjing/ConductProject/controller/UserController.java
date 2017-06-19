@@ -17,7 +17,10 @@ public class UserController {
 	@Autowired
 	public UserMapper userMapper;
 	
-	
+	/**
+	 * 测试方法
+	 * @return
+	 */
 	@RequestMapping(value="/findUserByName")
 	public List<User> finUser(){
 		List<User> userList=userMapper.findUser("刘壮");

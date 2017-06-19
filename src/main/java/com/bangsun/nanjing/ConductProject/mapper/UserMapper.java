@@ -4,7 +4,11 @@ import java.util.List;
 
 import com.bangsun.nanjing.ConductProject.pojo.User;
 
-
+/**
+ * 用户管理
+ * @author liuzh
+ *
+ */
 public interface UserMapper {
 
 	public boolean addUser(User user);

@@ -14,9 +14,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		// TODO Auto-generated method stub
-		System.out.println("拦截已经进来了？");
 		registry.addInterceptor(proInt).addPathPatterns("/**");
-		System.out.println("已经开始 拦截了");
 		super.addInterceptors(registry);
 	}
 
